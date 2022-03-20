@@ -23,6 +23,7 @@ class User extends Authenticatable
 
     /**
      * Get the user's image.
+     * connecting the child table with class and the common column
      */
     public function image()
     {

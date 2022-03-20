@@ -8,7 +8,9 @@ use App\Models\Image;
 
 class SampleController extends Controller
 {
-    //
+    /*
+    * this function will show how to insert and return data in polymorphic relationship
+    */
     public function getImage(){
         $post = Post::find(1);
  

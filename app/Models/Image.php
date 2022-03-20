@@ -11,6 +11,7 @@ class Image extends Model
 
     /**
      * Get the parent imageable model (user or post).
+     * this model is common for both user and post models
      */
     public function imageable()
     {

@@ -10,6 +10,7 @@ class Post extends Model
     use HasFactory;
     /**
      * Get the post's image.
+     * connecting the child table with class and the common column
      */
     public function image()
     {
