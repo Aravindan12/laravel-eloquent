@@ -17,3 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('get-image', [SampleController::class,'getImage']);
+Route::get('get-lower-case', [SampleController::class,'gettingLowerCaseValue']);
+Route::get('get-upper-case', [SampleController::class,'addingUpperCaseValue']);
+Route::get('get-scope-records', [SampleController::class,'getScopeRecords']);
+Route::get('add-user', [SampleController::class,'addUsers']);
+Route::get('get-comments', [SampleController::class,'getComments']);
+Route::get('delete-user/{id}', [SampleController::class,'deleteUser']);
