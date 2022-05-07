@@ -23,14 +23,14 @@ class SampleController extends Controller
     }
 
     public function gettingLowerCaseValue(){
-        $user = User::find(1);
+        $user = User::find(13);
         return view('show_details',compact('user'));
     }
 
     
     public function addingUpperCaseValue(){
         $user = new User;
-        $user->name = "raguvaran";
+        $user->name = "laravel";
         $user->save();
         return view('show_details',compact('user'));
     }
