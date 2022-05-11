@@ -23,3 +23,4 @@ Route::get('get-scope-records', [SampleController::class,'getScopeRecords']);
 Route::get('add-user', [SampleController::class,'addUsers']);
 Route::get('get-comments', [SampleController::class,'getComments']);
 Route::get('delete-user/{id}', [SampleController::class,'deleteUser']);
+Route::get('add-post', [SampleController::class,'addPost']);

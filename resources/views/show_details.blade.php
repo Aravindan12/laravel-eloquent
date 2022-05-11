@@ -7,6 +7,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>{{$user->full_name}}</h1>
+    {{-- showing full name using accessors --}}
+    <h1>@if(isset($user->full_name)){{$user->full_name}} @endif</h1>
+    {{-- showing name in uppercase using model observer --}}
+    <h1>@if($name){{$name}} @endif</h1>
 </body>
 </html>
