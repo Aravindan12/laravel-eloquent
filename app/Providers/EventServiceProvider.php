@@ -6,7 +6,10 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Event;
-
+use App\Events\UserEvent;
+use App\Listeners\UserMail;
+use App\Observers\PostObserver;
+use App\Models\Post;
 class EventServiceProvider extends ServiceProvider
 {
     /**
@@ -22,11 +25,18 @@ class EventServiceProvider extends ServiceProvider
 
     /**
      * Register any events for your application.
-     *
+     * Registered a model event for user model
+     * Registered a observer for post model
      * @return void
      */
     public function boot()
     {
-        //
+        Event::listen(
+            UserEvent::class,
+            [UserMail::class, 'handle']
+        );
+
+        Post::observe(PostObserver::class);
+
     }
 }

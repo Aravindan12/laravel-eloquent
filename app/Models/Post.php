@@ -33,7 +33,9 @@ class Post extends Model
         return $query->where('status',$type);
     }
 
-
+    /**
+     * Added the model events while creating a record
+     */
     public static function boot() {
   
         parent::boot();
