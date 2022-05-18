@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SampleController;
+use App\Http\Controllers\TestController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,3 +25,8 @@ Route::get('add-user', [SampleController::class,'addUsers']);
 Route::get('get-comments', [SampleController::class,'getComments']);
 Route::get('delete-user/{id}', [SampleController::class,'deleteUser']);
 Route::get('add-post', [SampleController::class,'addPost']);
+
+
+Route::get('/sender-msg', [TestController::class,'sender']);
+Route::post('sender', [TestController::class,'sendMessage']);
+Route::get('/receiver', [TestController::class,'receiver']);
