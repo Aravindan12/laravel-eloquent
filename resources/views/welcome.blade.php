@@ -3,7 +3,7 @@
 <head>
     <title>Laravel Livewire</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-    @livewireStyles
+@livewireStyles
 </head>
 <body>
     <div class="container">
@@ -19,12 +19,12 @@
                                 {{ session('message') }}
                             </div>
                         @endif
-                        @livewire('posts')
+@livewire('posts')
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    @livewireScripts
+@livewireScripts
 </body>
 </html>
